@@ -1,0 +1,181 @@
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment
+$ git init
+Initialized empty Git repository in C:/Users/nithishkumar.s/Desktop/git-lab-assi
+gnment/.git/
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (main)
+$ touch readme.md
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        readme.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (main)
+$ git add .
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (main)
+$ git commit -m "Initial commit"
+[main (root-commit) fd70e4f] Initial commit
+ Committer: Nithishkumar S <nithishkumar.s>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme.md
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (main)
+$ git config log
+error: key does not contain a section: log
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (main)
+$ git config user.name "nith"
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (main)
+$ git config user.email "nith@gmail.com"
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (main)
+$ git commit -m "Initial commit"
+On branch main
+nothing to commit, working tree clean
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (main)
+$ touch index.html
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (main)
+$ git add .
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (main)
+$ git commit -m "index.html added"
+[main 57a7ae4] index.html added
+ 1 file changed, 11 insertions(+)
+ create mode 100644 index.html
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (main)
+$ git log
+commit 57a7ae4f28023edc3b98260ade373c21e04bff3d (HEAD -> main)
+Author: nith <nith@gmail.com>
+Date:   Wed Feb 25 09:59:21 2026 +0530
+
+    index.html added
+
+commit fd70e4f4cb21bd29a9bf621bbec50d89fbd8cc3c
+Author: Nithishkumar S <nithishkumar.s>
+Date:   Wed Feb 25 09:56:52 2026 +0530
+
+    Initial commit
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (main)
+$ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   readme.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (main)
+$ git add .
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (main)
+$ git commit -m "third commit"
+[main d933fc9] third commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (main)
+$ git remote add origin https://github.com/Nithish2k2-offl/git-lab-assignment.git
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (main)
+$ git push -u origin main
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (9/9), 913 bytes | 456.00 KiB/s, done.
+Total 9 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/Nithish2k2-offl/git-lab-assignment.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (main)
+$ git pull origin main
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 991 bytes | 10.00 KiB/s, done.
+From https://github.com/Nithish2k2-offl/git-lab-assignment
+ * branch            main       -> FETCH_HEAD
+   d933fc9..d0256e6  main       -> origin/main
+Updating d933fc9..d0256e6
+Fast-forward
+ readme.md | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (main)
+$ git checkout -b test-branch
+Switched to a new branch 'test-branch'
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (test-branch)
+$ git add .
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (test-branch)
+$ git commit -m "test branch update"
+[test-branch 3c8ec02] test branch update
+ 1 file changed, 1 insertion(+)
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (test-branch)
+$ git push origin test
+error: src refspec test does not match any
+error: failed to push some refs to 'https://github.com/Nithish2k2-offl/git-lab-a
+ssignment.git'
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (test-branch)
+$ git push origin test-branch
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 316 bytes | 316.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'test-branch' on GitHub by visiting:
+remote:      https://github.com/Nithish2k2-offl/git-lab-assignment/pull/new/test
+-branch
+remote:
+To https://github.com/Nithish2k2-offl/git-lab-assignment.git
+ * [new branch]      test-branch -> test-branch
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (test-branch)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (main)
+$ git merge test-branch
+Updating d0256e6..3c8ec02
+Fast-forward
+ readme.md | 1 +
+ 1 file changed, 1 insertion(+)
+
+nithishkumar.s@CPDK289 MINGW64 ~/Desktop/git-lab-assignment (main)
+$
